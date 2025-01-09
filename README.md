@@ -1,58 +1,52 @@
-# Automated-Reconnaissance
-Automated Reconnaissance Tool for Bug Bounty and Penetration Testing.
+# NamXploit
 
-**Automated Reconnaissance** adalah sebuah automated reconnaissance tool yang dirancang untuk membantu bug bounty hunters dan penetration testers dalam melakukan enumerasi subdomain, pemindaian kerentanan, dan pengumpulan informasi secara otomatis. Tools ini mengintegrasikan berbagai tools populer seperti `nuclei`, `gau`, `paramspider`, `httpx`, dan lainnya.Tools ini juga di integrasikan dengan Bot Telegram agar bisa mengirim report ke bot telegram masing-masing.
+![NamXploit Banner](namxploit.png)
+
+![GitHub](https://img.shields.io/badge/License-MIT-blue.svg)
+
+**NamXploit** adalah alat otomatis untuk pemindaian subdomain dan enumerasi aset. Alat ini dirancang untuk membantu bug bounty hunters dan penetration testers dalam mengidentifikasi subdomain yang rentan.
 
 ---
 
-## Fitur Utama
-- **Subdomain Enumeration**: Menggunakan `nuclei`, `gau`, `paramspider`, dan `waybackurls` untuk menemukan subdomain.
-- **Vulnerability Scanning**: Menggunakan `nuclei` untuk memindai kerentanan seperti SQL Injection, XSS, SSRF, dll.
-- **Information Gathering**: Mengumpulkan informasi dari Wayback Machine, URL, dan parameter.
-- **Telegram Integration**: Mengirim notifikasi dan hasil pemindaian ke Telegram.
-- **Multithreading**: Menjalankan beberapa perintah secara paralel untuk meningkatkan kecepatan.
+## Fitur
+
+- **Subdomain Enumeration**: Menggunakan `subfinder` dan `amass` untuk menemukan subdomain.
+- **Live Subdomain Check**: Memeriksa subdomain yang aktif menggunakan `httpx`.
+- **Directory Scanning**: Memindai direktori dengan `dirsearch`.
+- **Vulnerability Scanning**: Menjalankan `nuclei` untuk mendeteksi kerentanan.
+- **Rate Limiting**: Menghindari pemblokiran IP dengan jeda waktu dan rotasi User-Agent.
+
+---
+
+## Persyaratan
+
+- **Git**: Untuk mengklon repositori.
+- **Go**: Untuk menginstal alat-alat seperti `subfinder`, `httpx`, dan `nuclei`.
+- **Python 3**: Untuk menjalankan `dirsearch`.
 
 ---
 
 ## Instalasi
 
-### Persyaratan
-- Python 3.x
-- Tools yang diperlukan: `nuclei`, `gau`, `paramspider`, `httpx`, `katana`, `hakrawler`.
-
-### Langkah-langkah
-1. Clone repository ini:
+ **Clone Repositori**:
    ```bash
-   git clone https://github.com/Anam1602/Automated-Reconnaissance.git
+   git clone https://github.com/Anam1602/Automated-Reconnaissance
    cd Automated-Reconnaissance
-   pip install -r requirements.txt
-   python3 automated.py
+   ./automated.sh
+   ```
+## Konfigurasi Path Secara Manual
 
-2. Requirements Tools
-   Instalasi Tools
-   Nuclei
-   ```bash
-   go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
-   ```
-   Gau
-   ```bash
-   go install -v github.com/lc/gau/v2/cmd/gau@latest
-   ```
-   Paramspider
-   ```bash
-   git clone https://github.com/devanshbatham/ParamSpider
-   cd ParamSpider
-   pip install -r requirements.txt
-   ```
-   httpx
-   ```bash
-   go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
-   ```
-   Katana
-   ```bash
-   go install -v github.com/projectdiscovery/katana/cmd/katana@latest
-   ```
-   Hakrawler
-   ```bash
-   go install -v github.com/hakluke/hakrawler@latest
-   ```
+Beberapa alat yang digunakan dalam skrip ini memerlukan path tertentu untuk diatur secara manual. Berikut adalah panduan untuk mengkonfigurasi path tersebut:
+
+### 1. **Dirsearch**
+Dirsearch digunakan untuk memindai direktori. Pastikan Anda telah mengklon repositori `dirsearch` dan mengatur path-nya di skrip.
+
+- **Langkah 1**: Clone repositori `dirsearch`:
+  ```bash
+  git clone https://github.com/maurosoria/dirsearch.git ~/dirsearch
+  ```
+- **Langkah 2**: buka skrip automated.sh:
+  ```bash
+  python3 ~/dirsearch/dirsearch.py -u "http://$DOMAIN" -o "$OUTPUT_DIR/dirsearch_output.txt" -t 50 -H "User-Agent: $(get_random_user_agent)"
+  ```
+- **Langkah 3**: `~/dirsearch/dirsearch.py` dengan path lengkap ke `dirsearch.py` di sistem Anda jika berbeda.
