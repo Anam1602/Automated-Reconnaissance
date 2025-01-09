@@ -6,15 +6,24 @@ import logging
 import time
 from concurrent.futures import ThreadPoolExecutor
 
+# ASCII Art for "Automated"
+automated_banner = """
+    ___         __                        __           __   
+   /   | __  __/ /_____  ____ ___  ____ _/ /____  ____/ /   
+  / /| |/ / / / __/ __ \/ __ `__ \/ __ `/ __/ _ \/ __  /    
+ / ___ / /_/ / /_/ /_/ / / / / / / /_/ / /_/  __/ /_/ /     
+/_/  |_\__,_/\__/\____/_/ /_/ /_/\__,_/\__/\___/\__,_/  
+"""
+
+print(automated_banner)
+print("By NamXploit\n")
+
 # Setup logging
 logging.basicConfig(filename="namxploit.log", level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
-# ASCII Art
-print("By NamXploit\n")
-
 # Load environment variables
-BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "TELEGRAM_BOT_TOKEN_ANDA")  # Ganti dengan token bot Anda
-CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "CHAT_ID_ANDA")  # Ganti dengan chat ID Anda
+BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "7447060549:AAGMgWudQNts38MULPNZLxzGhK8aXqql3lk")  # Ganti dengan token bot Anda
+CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "1542475607")  # Ganti dengan chat ID Anda
 
 # Fungsi untuk mengirim pesan ke Telegram
 def send_message(bot_token, chat_id, text):
