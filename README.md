@@ -26,3 +26,5 @@ Automated Reconnaissance Tool for Bug Bounty and Penetration Testing.
    ```bash
    git clone https://github.com/username/NamXploit.git
    cd NamXploit
+   pip install -r requirements.txt
+   
