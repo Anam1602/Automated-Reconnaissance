@@ -1,7 +1,6 @@
 # Automated-Reconnaissance
 Automated Reconnaissance Tool for Bug Bounty and Penetration Testing.
 
-# Anam
 **Automated Reconnaissance** adalah sebuah automated reconnaissance tool yang dirancang untuk membantu bug bounty hunters dan penetration testers dalam melakukan enumerasi subdomain, pemindaian kerentanan, dan pengumpulan informasi secara otomatis. Tools ini mengintegrasikan berbagai tools populer seperti `nuclei`, `gau`, `paramspider`, `httpx`, dan lainnya.Tools ini juga di integrasikan dengan Bot Telegram agar bisa mengirim report ke bot telegram masing-masing.
 
 ---
@@ -24,7 +23,36 @@ Automated Reconnaissance Tool for Bug Bounty and Penetration Testing.
 ### Langkah-langkah
 1. Clone repository ini:
    ```bash
-   git clone https://github.com/username/NamXploit.git
-   cd NamXploit
+   git clone https://github.com/Anam1602/Automated-Reconnaissance.git
+   cd Automated-Reconnaissance
    pip install -r requirements.txt
-   
+   python3 automated.py
+
+2. Requirements Tools
+   Instalasi Tools
+   Nuclei
+   ```bash
+   go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
+   ```
+   Gau
+   ```bash
+   go install -v github.com/lc/gau/v2/cmd/gau@latest
+   ```
+   Paramspider
+   ```bash
+   git clone https://github.com/devanshbatham/ParamSpider
+   cd ParamSpider
+   pip install -r requirements.txt
+   ```
+   httpx
+   ```bash
+   go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
+   ```
+   Katana
+   ```bash
+   go install -v github.com/projectdiscovery/katana/cmd/katana@latest
+   ```
+   Hakrawler
+   ```bash
+   go install -v github.com/hakluke/hakrawler@latest
+   ```
