@@ -16,7 +16,7 @@ automated_banner = """
 """
 
 print(automated_banner)
-print("By NamXploit\n")
+print("By Anam\n")
 
 # Setup logging
 logging.basicConfig(filename="namxploit.log", level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
