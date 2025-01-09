@@ -12,12 +12,12 @@
 
 **Welcome to NamXploit!**
 
-**Automated Subdomain Scanning Tool**
+**Automated Reconnaissance**
 
 </div>
 
 ---
-**NamXploit** adalah alat otomatis untuk pemindaian subdomain dan enumerasi aset. Alat ini dirancang untuk membantu bug bounty hunters dan penetration testers dalam mengidentifikasi subdomain yang rentan.
+**Automated Reconnaissance** adalah alat otomatis untuk pemindaian subdomain dan enumerasi aset. Alat ini dirancang untuk membantu bug bounty hunters dan penetration testers dalam mengidentifikasi subdomain yang rentan.
 
 ---
 
