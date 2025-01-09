@@ -1,9 +1,22 @@
+<div align="center">
+
 # NamXploit
 
-![NamXploit Banner](namxploit.png)
+![NamXploit Logo](https://github.com/Anam1602/Automated-Reconnaissance/raw/main/namxploit.png)
 
-![GitHub](https://img.shields.io/badge/License-MIT-blue.svg)
+</div>
 
+---
+
+<div align="center">
+
+**Welcome to NamXploit!**
+
+**Automated Subdomain Scanning Tool**
+
+</div>
+
+---
 **NamXploit** adalah alat otomatis untuk pemindaian subdomain dan enumerasi aset. Alat ini dirancang untuk membantu bug bounty hunters dan penetration testers dalam mengidentifikasi subdomain yang rentan.
 
 ---
@@ -49,4 +62,4 @@ Dirsearch digunakan untuk memindai direktori. Pastikan Anda telah mengklon repos
   ```bash
   python3 ~/dirsearch/dirsearch.py -u "http://$DOMAIN" -o "$OUTPUT_DIR/dirsearch_output.txt" -t 50 -H "User-Agent: $(get_random_user_agent)"
   ```
-- **Langkah 3**: `~/dirsearch/dirsearch.py` dengan path lengkap ke `dirsearch.py` di sistem Anda jika berbeda.
+- **Langkah 3**:sesuaikan `~/dirsearch/dirsearch.py` dengan path lengkap ke `dirsearch.py` di sistem Anda jika berbeda.
