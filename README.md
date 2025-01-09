@@ -45,7 +45,12 @@
    ```bash
    git clone https://github.com/Anam1602/Automated-Reconnaissance
    cd Automated-Reconnaissance
+   chmod +x namxploit.sh
    ./automated.sh
+   ```
+## Usage
+   ```bash
+   Masukkan domain (contoh: example.com): testphp.vulnweb.com
    ```
 ## Konfigurasi Path Secara Manual
 
